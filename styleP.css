@@ -8,6 +8,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 header {
@@ -48,7 +49,7 @@ nav#menu a {
 }
 
 main {
-    padding: 100px 20px 20px; /* Adjust padding to accommodate fixed header */
+    padding: 100px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +59,7 @@ main {
     box-sizing: border-box;
 }
 
-#experience {
+#projets {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -68,97 +69,89 @@ main {
     margin: 20px;
 }
 
-#experience h1 {
+
+#projets h1 {
     text-align: center;
     color: #333;
     margin-bottom: 40px;
 }
 
-.card-container {
+.project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.card {
+.project-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: calc(33% - 40px); 
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
     margin: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: none; /* Hide all cards initially */
 }
 
-.card h2 {
+.project-card img {
+    max-width: 100%;
+    max-height: 200px; /* Adjust max-height to fit within fixed card height */
+    border-radius: 10px;
+}
+
+.project-card h2 {
     color: #009bff;
-    margin-top: 0;
+    margin-top: 10px;
 }
 
-.card h3 {
-    color: #555;
+.project-card p {
+    color: #666;
     margin: 10px 0;
 }
 
-.card p {
-    color: #666;
-    margin: 5px 0;
+/* Make the first project visible initially */
+.project-card:first-child {
+    display: block;
 }
 
-.hexagone {
-    box-sizing: border-box;
-    position: relative;
-    width: 60.62178px;
-    height: 35px;
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    color: #fff;
     background-color: #009bff;
-    margin: 17.5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.hexagone:before,
-.hexagone:after {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    width: 0;
-    border-left: 30.31089px solid transparent;
-    border-right: 30.31089px solid transparent;
+.navigation-buttons button:hover {
+    background-color: #007acc;
 }
 
-.hexagone:after {
-    top: 100%;
-    width: 0;
-    border-top: 17.5px solid #009bff;
-}
-
-.hexagone:before {
-    bottom: 100%;
-    border-bottom: 17.5px solid #009bff;
-}
-
-.hexagone.fixed-bottom-right {
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    margin: 0;
-}
-
-.hexagone.fixed-top-left {
-    position: fixed;
-    top: 100px;
-    left: 20px;
-    margin: 0;
-}
-
-/* Styles responsives */
+/* Responsive styles */
 @media (max-width: 768px) {
-    .card {
+    .project-card {
         width: calc(50% - 40px);
+        height: auto; /* Allow height to adjust on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .card {
+    .project-card {
         width: calc(100% - 40px);
+        height: auto; /* Allow height to adjust on smaller screens */
     }
 
     header {
