@@ -1,0 +1,127 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: #009bff;
+    color: #fff;
+    padding: 10px 20px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#title {
+    flex: 1;
+    font-size: 1.5em;
+}
+
+#title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav#menu {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav#menu a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 100px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#competences {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+}
+
+#competences h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.competence {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.niveau, .exemples {
+    margin-bottom: 20px;
+}
+
+.niveau h3, .exemples h3 {
+    text-align: center;
+    color: #009bff;
+}
+
+.niveau ul, .exemples ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.niveau li, .exemples li {
+    background-color: #e6f7ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+}
+
+.niveau li:hover, .exemples li:hover {
+    background-color: #cceeff;
+    cursor: pointer;
+}
+.niveau li.niv {
+    background-color: #a3e635; /* Background color for mastered levels */
+    color: #fff;
+    font-weight: bold;
+}
+
+.niveau li.niv:hover {
+    background-color: #43630f; /* Background color for mastered levels */
+    cursor: pointer;
+}
