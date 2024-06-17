@@ -1,23 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Compétences</title>
     <link rel="stylesheet" href="styleC.css">
 </head>
 <body>
     <header>
         <div id="title">
-            <a>Portfolio</a>
+            <a href="#">Portfolio</a>
         </div>
-       
-        <div id="menu">
+        <nav id="menu">
             <a href="index.html">Accueil</a>
-            <a href="competences.html">Compétences</a>
             <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
             <a href="#contact">Contact</a>
-        </div>
+        </nav>
     </header>
+    <main>
+        <section id="competences">
+            <h1>Compétences</h1>
+            <div class="navigation-buttons">
+                <button id="showLangagesBtn">Langages</button>
+                <button id="showOutilsBtn">Outils</button>
+            </div>
+            <div id="langages-container" class="skills-container">
+                <!-- Language Skills -->
+                <div class="skill-category">
+                    <img src="C.jpeg" alt="C">
+               
+                </div>
+                <div class="skill-category">
+                    <img src="Python.jpeg" alt="Python">
+                  
+                </div>
+                <div class="skill-category">
+                    <img src="Java.jpeg" alt="Java">
+               
+                </div>
+                <div class="skill-category">
+                    <img src="Js.jpeg" alt="JavaScript">
+                   
+                </div>
+                <div class="skill-category">
+                    <img src="html.jpeg" alt="HTML/CSS">
+                    
+                </div>
+                <div class="skill-category">
+                    <img src="sql.jpeg" alt="SQL">
+                   
+                </div>
+            </div>
+            <div id="outils-container" class="skills-container" style="display: none;">
+                <!-- Tool Skills -->
+                <div class="skill-category">
+                    <img src="github.jpeg" alt="Git/GitHub">
+                    
+                </div>
+                
+                <div class="skill-category">
+                    <img src="vs.jpeg" alt="VS Code">
+                   
+                </div>
+                
+             
+            
+                <div class="skill-category">
+                    <img src="wamp.jpeg" width="120%"ult="WAMP">
+          
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scriptC.js"></script>
 </body>
 </html>
