@@ -3,53 +3,49 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1C2942;
+
+}
+
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+}
+
+.content-wrapper {
+    flex: 1;
 }
 
 header {
-    width: 100%;
     display: flex;
-    background-color: #009bff;
-    color: #fff;
-    padding: 10px 20px;
+    color: #0B162C;
+    padding: 10px 0;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 #title {
     flex: 1;
-    font-size: 1.5em;
+    margin: 10px;
+    justify-content: start;
+    color : #5FC2BA;
+    font-size: 4vh;
 }
 
-#title a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav#menu {
-    flex: 2;
+#menu {
+    flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-nav#menu a {
-    padding: 10px 20px;
-    color: #fff;
+#menu a {
+    padding: 15px;
+    color: #5FC2BA;
     text-decoration: none;
     font-weight: bold;
 }
 
 main {
-    padding: 100px 20px 20px;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,10 +56,10 @@ main {
 }
 
 #projets {
-    background-color: #fff;
+   
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
     max-width: 1200px;
     width: 100%;
     margin: 20px;
@@ -72,7 +68,7 @@ main {
 
 #projets h1 {
     text-align: center;
-    color: #333;
+    color: #fff;
     margin-bottom: 40px;
 }
 
@@ -84,18 +80,23 @@ main {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #0B162C   ;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #5FC2BA;
     padding: 20px;
-    width: 300px; /* Fixed width */
-    height: 400px; /* Fixed height */
+    width: 40vh; /* Fixed width */
+    height: 61vh; /* Fixed height */
     margin: 10px;
     text-align: center;
     position: relative;
-    overflow: hidden;
+   
     box-sizing: border-box;
-    display: none; /* Hide all cards initially */
+   /* Hide all cards initially */
+}
+
+.project-card:hover{
+    cursor: pointer;
+    background-color: #0b162c5f;
 }
 
 .project-card img {
@@ -103,42 +104,32 @@ main {
     max-height: 200px; /* Adjust max-height to fit within fixed card height */
     border-radius: 10px;
 }
+.project-card button {
+
+    border-radius: 18px;
+    padding: 10px 15px;
+    background-color: #3B556D;
+    color: #0B162C;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin : 0.2vh;
+    margin-bottom: 1vh;
+    color: #fff;
+}
 
 .project-card h2 {
-    color: #009bff;
+    color: #fff;
     margin-top: 10px;
 }
 
 .project-card p {
-    color: #666;
+    color: #fff;
     margin: 10px 0;
 }
 
-/* Make the first project visible initially */
-.project-card:first-child {
-    display: block;
-}
 
-.navigation-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-.navigation-buttons button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #009bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.navigation-buttons button:hover {
-    background-color: #007acc;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {

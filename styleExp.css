@@ -45,7 +45,7 @@ header {
 }
 
 main {
-    padding: 100px 20px 20px; /* Adjust padding to accommodate fixed header */
+   /* Adjust padding to accommodate fixed header */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@ main {
 
 #experience {
    
-    padding: 20px;
+    
 
     max-width: 1200px;
     width: 100%;
@@ -67,7 +67,7 @@ main {
 #experience h1 {
     text-align: center;
     color: #fff;
-    margin-bottom: 40px;
+    
 }
 
 .card-container {
@@ -82,7 +82,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px #5FC2BA;
     padding: 20px;
-    width: calc(33% - 40px); 
+    width: 40vh; 
+    height: 25vh;
     margin: 10px;
 }
 
