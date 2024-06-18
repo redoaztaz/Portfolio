@@ -3,46 +3,43 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1C2942;
+    overflow: hidden;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.content-wrapper {
+    flex: 1;
 }
 
 header {
-    width: 100%;
     display: flex;
-    background-color: #009bff;
-    color: #fff;
-    padding: 10px 20px;
+    color: #0B162C;
+    padding: 10px 0;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 #title {
     flex: 1;
-    font-size: 1.5em;
+    margin: 10px;
+    justify-content: start;
+    color : #5FC2BA;
+    font-size: 4vh;
 }
 
-#title a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav#menu {
-    flex: 2;
+#menu {
+    flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-nav#menu a {
-    padding: 10px 20px;
-    color: #fff;
+#menu a {
+    padding: 15px;
+    color: #5FC2BA;
     text-decoration: none;
     font-weight: bold;
 }
@@ -59,10 +56,9 @@ main {
 }
 
 #experience {
-    background-color: #fff;
+   
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     max-width: 1200px;
     width: 100%;
     margin: 20px;
@@ -70,7 +66,7 @@ main {
 
 #experience h1 {
     text-align: center;
-    color: #333;
+    color: #fff;
     margin-bottom: 40px;
 }
 
@@ -82,26 +78,26 @@ main {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #0B162C;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #5FC2BA;
     padding: 20px;
     width: calc(33% - 40px); 
     margin: 10px;
 }
 
 .card h2 {
-    color: #009bff;
+    color: #fff;
     margin-top: 0;
 }
 
 .card h3 {
-    color: #555;
+    color: #fff;
     margin: 10px 0;
 }
 
 .card p {
-    color: #666;
+    color: #fff;
     margin: 5px 0;
 }
 
@@ -110,7 +106,7 @@ main {
     position: relative;
     width: 60.62178px;
     height: 35px;
-    background-color: #009bff;
+    background-color: #0B162C;
     margin: 17.5px 0;
 }
 
@@ -127,12 +123,12 @@ main {
 .hexagone:after {
     top: 100%;
     width: 0;
-    border-top: 17.5px solid #009bff;
+    border-top: 17.5px solid #0B162C;
 }
 
 .hexagone:before {
     bottom: 100%;
-    border-bottom: 17.5px solid #009bff;
+    border-bottom: 17.5px solid #0B162C;
 }
 
 .hexagone.fixed-bottom-right {
